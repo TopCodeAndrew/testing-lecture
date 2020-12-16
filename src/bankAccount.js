@@ -4,6 +4,9 @@ module.exports = {
     this.balance += amount
   },
   withdrawMoney(amount) {
+    if (amount > this.balance) {
+      return 'Cannot overdraw account'
+    }
     this.balance -= amount
   },
 }
